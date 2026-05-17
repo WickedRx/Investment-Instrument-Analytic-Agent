@@ -234,7 +234,7 @@ with detail_col2:
     st.metric("Approx. 1Y total return", f"{ticker_row['approx_1y_total_return_pct']:.2f}%")
 
 with detail_col3:
-    st.metric("Max 1Y drawdown", f"{ticker_row['largest_1y_price_decline_pct']:.2f}%")
+    st.metric("Largest 1Y price decline", f"{ticker_row['largest_1y_price_decline_pct']:.2f}%")
     st.metric("Payment count", int(ticker_row["number_of_payments_last_12_months"]))
 
 st.write("**Review priority:**", ticker_row["review_priority"])
