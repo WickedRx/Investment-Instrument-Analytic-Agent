@@ -110,7 +110,7 @@ display_columns = [
     "trailing_12_month_yield_pct",
     "return_1y_price_pct",
     "approx_1y_total_return_pct",
-    "max_drawdown_1y_pct",
+    "largest_1y_price_decline_pct",
     "number_of_payments_last_12_months",
     "yield_method_warning",
     "nav_erosion_warning",
@@ -234,7 +234,7 @@ with detail_col2:
     st.metric("Approx. 1Y total return", f"{ticker_row['approx_1y_total_return_pct']:.2f}%")
 
 with detail_col3:
-    st.metric("Max 1Y drawdown", f"{ticker_row['max_drawdown_1y_pct']:.2f}%")
+    st.metric("Max 1Y drawdown", f"{ticker_row['largest_1y_price_decline_pct']:.2f}%")
     st.metric("Payment count", int(ticker_row["number_of_payments_last_12_months"]))
 
 st.write("**Review priority:**", ticker_row["review_priority"])
